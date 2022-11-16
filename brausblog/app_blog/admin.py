@@ -5,7 +5,7 @@ from .models import Article, ArticleImage, Category
 from .forms import ArticleImageForm
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('category','slug')
+    list_display = ('category', 'slug')
     prepopulated_fields = {"slug": ("category",)}
     fieldsets = (('', {
                  'fields': ('category',),
@@ -18,19 +18,20 @@ class ArticleImageInline(admin.TabularInline):
     model = ArticleImage
     form = ArticleImageForm
     extra = 0
+
     fieldsets = (('', {
-              'fields': ('title','image',),
+              'fields': ('title', 'image',),
              }),
-                )
+    )
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'pub_date', 'slug', 'main_page')
+    list_display = ('title', 'pub_date', 'slug', 'main_page', 'category')
     inlines = [ArticleImageInline]
     multiupload_form = True
     multiupload_list = False
     prepopulated_fields = {'slug': ('title',)}
     raw_id_fields = ('category',)
     fieldsets = (('', {
-              'fields': ('pub_date', 'title', 'description', 'main_page'),
+              'fields': ('pub_date', 'category', 'title', 'description', 'main_page'),
              }),
             ((u'Додатково'), {
              'classes': ('grp-collapse grp-closed',), 'fields': ('slug',),

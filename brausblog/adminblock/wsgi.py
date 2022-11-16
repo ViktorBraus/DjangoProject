@@ -1,5 +1,5 @@
 """
-WSGI config for brausblog project.
+WSGI config for adminblock project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "brausblog.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "adminblock.settings")
 
 application = get_wsgi_application()
