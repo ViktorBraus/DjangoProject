@@ -12,13 +12,18 @@
 <h4>{{ item.category }}</h4>
 </a></li>
 {% endfor %}
+          <li><a href="{% url 'articles-list' %}">
+<h4>Всі публікації</h4>
+</a></li>
       </ul>
+
 </div>
 </nav>
 {% endif %}
 {% if articles %}
 {% for item in articles %}
 <div class="article-block">
+    <h5 class="category">{{item.category}}</h5>
 <a href="{{ item.get_absolute_url }}">
 <h4>{{ item.title }}</h4>
 </a>

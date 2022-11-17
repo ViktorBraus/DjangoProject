@@ -19,10 +19,11 @@
 </h5>
 <div class="article-block">
 {{ item.description|escape|safe }}
-
-{% if item.images.all %}
+    <div class="fotoblock">
+        {% if item.images.all %}
 {% include 'fotorama.html' with images=images %}
 {% endif %}
+        </div>
 </div>
     </div>
 <div class="clearfix"></div>

@@ -6,7 +6,7 @@ font-size: 18px;
 }
 }
 body {
-background-image: url('../img/background.jpg'); background-repeat: repeat-y;
+background-image: url('../img/background.jpg');
 }
 div > h1 {
 color: #fff;
@@ -21,7 +21,8 @@ background: #c9e1ff; color: #383838;
 font-family: 'Ubuntu', sans-serif; box-shadow: 2px 2px 1px #ccc; padding: 10px;
 margin: 10px;
 }
-.article-block { background: #fff; color: #383838;
+.article-block {
+background: #fff; color: #383838;
 font-family: 'Ubuntu', sans-serif; box-shadow: 2px 2px 1px #ccc; padding: 10px;
 margin: 10px;
 }
@@ -30,5 +31,12 @@ font-family: 'Ubuntu', sans-serif;
 }
 body > div > div > ol > li { margin: 0 5px;
 }
-div.container-image > img { width: 100%;
+.category
+{
+color:gray;
+font-size:12px;
+}
+div.container-image > img
+{
+width:20%;
 }

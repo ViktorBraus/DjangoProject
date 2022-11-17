@@ -25,7 +25,7 @@
 {{ item.description|safe|escape|striptags|truncatewords_html:32 }}
 </p>
 <div class="container-image">
-<img class="img" src="{{ item.images.all.0.image.url }}" alt=""/>
+<img class="img" src="{{ item.images.all.0.image.url }}" alt="{{item.images.description}}"/>
 </div>
 <div class='clearfix'></div>
 </div>
